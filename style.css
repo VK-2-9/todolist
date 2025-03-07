@@ -1,2 +1,14 @@
 
 
+.table{
+    margin-left: 10%;
+    width: 80%;
+}
+
+
+
+table th, table td{
+    border: solid rgba(128, 0, 128, 0.776) 1px;
+    padding: 5px;
+    
+}
