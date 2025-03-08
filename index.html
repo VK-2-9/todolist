@@ -33,89 +33,92 @@
     <!--details section-->
     <section class="container1">
       <h1 class="text-center mt-4 font-bold text-xl">Provide your details</h1>
-      <form class="data p-2 text-center">
+      <div class=" p-2 text-center">
         <div class="m-2">
           <input
+          
+            id="studentName"
             type="text"
             placeholder="Name"
-            class="border border-purple-600 rounded w-72 p-1 md:w-96"
-            required
+            class=" border border-purple-600 rounded w-72 p-1 md:w-96"
+            
           />
         </div>
         <div class="m-2">
           <input
+            id="studentAge"
             type="number"
             placeholder="Age"
             class="border border-purple-600 rounded p-1 w-72 md:w-96"
-            required
+            
           />
         </div>
         <div class="m-2">
-          <select
-            class="border border-purple-600 rounded p-1 text-gray-400 w-72 md:w-96"
-            required
-          >
-            <option disabled selected>Gender</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Others">Others</option>
+          <select id="gender"class="border border-purple-600 rounded p-1 text-gray-400 w-72 md:w-96">
+            <option value disabled selected>Select Gender</option>
+            <option class="text-black" value="Male">Male</option>
+            <option class="text-black" value="Female">Female</option>
+            <option class="text-black" value="Others">Others</option>
           </select>
         </div>
 
         <div class="m-2">
           <input
+          id="course"
             type="text"
             placeholder="Course"
             class="border border-purple-600 rounded p-1 w-72 md:w-96"
-            required
+            
           />
         </div>
 
         <div class="m-2">
           <input
+          id="mail"
             type="email"
             placeholder="Email ID"
             class="border border-purple-600 rounded p-1 w-72 md:w-96"
-            required
+            
           />
         </div>
 
         <div class="text-center">
-          <input
-            type="submit"
-            value="Save"
-            class="m-2 bg-purple-600 rounded p-1 text-white w-36 cursor-pointer"
-          />
+          <button id="submit" class="m-2 bg-purple-600 rounded p-1 text-white w-36 cursor-pointer">Submit</button>
+          
         </div>
-      </form>
+      </div>
     </section>
 
 <!--Collected data section-->
-    <section class="container2 text-center">
-      <h1 class=" mt-4 font-bold text-xl">Students List</h1>
-
-      <table class="table ">
-        <tr class="bg-purple-600" >
+      <h1 class="text-center mt-4 font-bold text-xl">Students List</h1>
+<div class="studentList">
+       <table class="w-full text-center  " id="table">
+        <tr class="bg-purple-600 " >
           <th>Name</th>
           <th>Age</th>
           <th>Gender</th>
           <th>Course</th>
           <th>Email ID</th>
           <th>Action</th>
-          
         </tr>
 
         <tr>
-
           <td>VK</td>
           <td>23</td>
           <td>Male</td>
           <td>JS</td>
           <td>vishalnath002@gmail.com</td>
-          <td>Action</td>
-
+          <td >
+            <button class=" bg-green-500  rounded-2xl btn p-0 ">Edit</button>
+            <button class=" bg-red-500  rounded-2xl  btn">Delete</button>
+          </td>
         </tr>
+
       </table>
-    </section>  
+
+    </div>
+
+  
+    <script src="./script.js"></script>
   </body>
 </html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <!--tailwind cdn link-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+</head>
+<body>
+
+    
+    <input type="text" placeholder="name" id="studentName">
+    <input type="number" id="studentAge">
+    <input type="submit" id="submit">
+
+
+       <table class="w-full " id="table">
+        <tr class="bg-purple-600 " >
+            <th>Name</th>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Course</th>
+              <th>Email ID</th>
+              <th>Action</th>
+            </tr>
+            <tr>
+                <td>VK</td>
+                <td>23</td>
+                <td>Male</td>
+                <td>JS</td>
+                <td>vishalnath002@gmail.com</td>
+                <td >
+                  <button class=" bg-green-500 pt-1 pb-1 p-2 rounded-2xl mb-1 ">Edit</button>
+                  <button class=" bg-red-500   rounded-2xl pt-1 pb-1 p-2 ">Delete</button>
+                </td>
+              </tr>
+    </table>
+
+
+    <script>
+        var studentName=document.getElementById("studentName")
+        var studentAge=document.getElementById("studentAge")
+        var submit= document.getElementById("submit")
+        var table=document.getElementById("table")
+        
+        submit.addEventListener("click",function(){
+            var newList=document.createElement("tr")
+            newList.innerHTML=`<td>${studentName.value}</td> <td>${studentAge.value}</td> <th>Gender</th>
+              <th>Course</th>
+              <th>Email ID</th>
+              <th>Action</th> `;
+            table.append(newList)
+        })
+
+    </script>
+</body>
+</html>
