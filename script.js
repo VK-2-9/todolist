@@ -9,7 +9,10 @@ var table=document.getElementById("table");
 var remove=document.getElementById("remove");
 var edit=document.getElementById("edit");
 
+
+
 submit.addEventListener("click",function(){
+    event.preventDefault()
     var newList= document.createElement("tr");
     newList.innerHTML=
    `<td>${studentName.value}</td>
@@ -21,18 +24,27 @@ submit.addEventListener("click",function(){
     <button id="edit" onclick="editList(event)" class=" bg-green-500  rounded-2xl btn ">Edit</button>
     <button id="remove" onclick="removeList(event)" class=" bg-red-500   rounded-2xl btn ">Delete</button>
     </td>`;
-
-table.append(newList);
+    alert("Data has been submitted")
+    table.append(newList);
 })
 
 
-function removeList(event){
 
-event.target.closest("tr").remove()
+function removeList(event){
+var list=event.target.closest("tr")
+list.remove()
+
 }
 
 function editList(event){
-
+    var row= event.target.closest("tr");
+    var cells=row.querySelectorAll("td");
+    studentName.value=cells[0].innerHTML;
+    studentAge.value=cells[1].innerHTML;
+    gender.value=cells[2].innerHTML;
+    course.value=cells[3].innerHTML;
+    mail.value=cells[4].innerHTML;
+    row.remove();
 }
 
 

@@ -1,7 +1,7 @@
 
 .studentList{
     width: 80%;
-    margin: 20px 10% 0 10%;
+    margin: 20px 10% 10% 10%;
     text-align: center;
     overflow-x:auto ;
 }
@@ -15,4 +15,19 @@
     width: 70px;
     padding: 0;
     margin: 5px 0 5px 0;
+}
+
+@media  screen and (max-width:600px){
+    *{
+        font-size: 10px;
+    }
+
+    .btn{
+        width: 35px;
+        margin: 2px ;
+    }
+    .studentList{
+        width: 90%;
+        margin-left: 5%;
+    }
 }
