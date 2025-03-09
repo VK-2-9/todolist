@@ -10,9 +10,12 @@ var remove=document.getElementById("remove");
 var edit=document.getElementById("edit");
 
 
-
 submit.addEventListener("click",function(){
     event.preventDefault()
+    if (studentName.value=="" || studentAge.value=="" || course.value=="" || gender.value=="" || mail.value=="" ){
+        alert("PLease fill all the details")
+    }
+else{  
     var newList= document.createElement("tr");
     newList.innerHTML=
    `<td>${studentName.value}</td>
@@ -26,6 +29,8 @@ submit.addEventListener("click",function(){
     </td>`;
     alert("Data has been submitted")
     table.append(newList);
+    document.querySelector('.form').reset();
+}
 })
 
 
